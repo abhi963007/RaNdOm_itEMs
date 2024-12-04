@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication - Verify Reset</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <form id="verifyResetForm" class="verify-reset-form">
+            <h2>Verify Reset</h2>
+            <p class="form-description">Enter the 6-digit code sent to your email.</p>
+            <div class="verification-code">
+                <div class="form-group">
+                    <input type="text" id="otp" name="otp" required data-validate="otp" placeholder="Enter 6-digit code" maxlength="6">
+                    <label for="otp">Verification Code</label>
+                </div>
+            </div>
+            <div class="error-message" id="code-error"></div>
+            <button type="submit" class="login-btn" disabled>Verify Code</button>
+            <div class="success-message">Code verified successfully!</div>
+            <div class="resend-timer">
+                Resend code in <span id="timer">60</span>s
+            </div>
+            <p class="resend-link" style="display: none;">
+                Didn't receive the code? <a href="#" id="resendCode">Resend</a>
+            </p>
+            <div class="social-signup">
+                <p>Or continue with:</p>
+                <div class="social-buttons">
+                    <button type="button" class="social-btn google">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjgzIDEwLjY0NmwtLjAwNS0uMDc0aC05LjM1djQuMDU0aDUuNzA3Yy0uNTggMi42NjctMi42MjggNC4wNTQtNS43MDcgNC4wNTQtMy40NTggMC02LjI3OS0yLjc1OC02LjI3OS02LjI3OSAwLTMuNTIxIDIuODIxLTYuMjc5IDYuMjc5LTYuMjc5IDEuNjM5IDAgMy4xNDkuNjM4IDQuMjk0IDEuNzk0bDMuMDg1LTMuMDg1QzE1LjQ0NyAxLjc4NyAxMi44NjYuNjM4IDEwIDEuNjM4IDUuMDU4IDMuNjM4IDEuNjM4IDguNDc3IDEuNjM4IDEyYzAgNC4wMDYgMy4yMzEgNy4yMzcgNy4yMzcgNy4yMzcgNC4wMDYgMCA3LjIzNy0zLjIzMSA3LjIzNy03LjIzNyAwLS42NTUtLjA4Mi0xLjI4OS0uMjI5LTEuOTAxeiIgZmlsbD0iI0ZGRkZGRiIvPjxwYXRoIGQ9Ik0xMiAxMmg3LjQ1MmMuMjQ4LS44NjguMzk4LTEuNzg3LjM5OC0yLjczOSAwLS45NTItLjE1LTEuODcxLS4zOTgtMi43MzlIMTJ2NS40Nzh6IiBmaWxsPSIjRkZGRkZGIi8+PC9zdmc+" alt="Google">
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjQ3NyAyIDIgNi40NzcgMiAxMmMwIDQuOTg2IDMuNjU1IDkuMTI4IDguNDM4IDkuODc5VjE0LjkwMkg4LjA1MXYtMi45aDIuMzg3VjkuNjI1YzAtMi4zNjcgMS40MDgtMy42NzMgMy41NjctMy42NzMgMS4wMjUgMCAxLjkwMi4wNzcgMi4xNTYuMTExdjIuNDhsLTEuNDY4LjAwMWMtMS4xNDggMC0xLjM3MS41NDctMS4zNzEgMS4zNTJ2MS43NzFoMi43NDdsLS4zNTcgMi45aC0yLjM5VjIxLjljNC45NjMtLjc1NCA4Ljc2LTQuOTM2IDguNzYtMTAuMDM1IDAtNS41MjMtNC40NzctMTAtMTAtMTB6IiBmaWxsPSIjRkZGRkZGIi8+PC9zdmc+" alt="Facebook">
+                    </button>
+                </div>
+            </div>
+            <p class="signup-link">
+                <a href="index.html" class="back-to-login">← Back to Login</a>
+            </p>
+        </form>
+    </div>
+    <script type="module" src="../js/verify-reset.js"></script>
+    <script src="../assets/particles/particles.min.js"></script>
+    <script src="../js/particles-config.js"></script>
+    <script type="module" src="../js/validation.js"></script>
+</body>
+</html>
